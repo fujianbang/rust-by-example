@@ -36,7 +36,7 @@ impl fmt::Display for Complex {
 
 fn main() {
     let minmax = MinMax(0, 14);
-    println!("Compare structures:");
+    println!("Compare structs:");
     println!("Display: {}", minmax);
     println!("Debug: {:?}", minmax);
 
