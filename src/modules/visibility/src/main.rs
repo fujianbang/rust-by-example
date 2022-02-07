@@ -28,7 +28,7 @@ mod my_mod {
 
         // 给定路径中可见
         pub(in crate::my_mod) fn public_function_in_my_mod() {
-            print!("called `my_mod::nested::public_function_in_my_mod()`, that\n > ");
+            print!("called `my_mod::nested::public_function_in_my_mod()`, that\n> ");
         }
 
         // 仅在当前模块中可见
