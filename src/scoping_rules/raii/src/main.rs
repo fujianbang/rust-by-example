@@ -4,6 +4,14 @@ fn create_box() {
     // _box1 销毁，释放内存
 }
 
+struct ToDrop;
+
+impl Drop for ToDrop {
+    fn drop(&mut self) {
+        println!("ToDrop is being dropped");
+    }
+}
+
 fn main() {
     // 堆上分配一个整型数据
     let _box2 = Box::new(5i32);
@@ -20,4 +28,8 @@ fn main() {
     }
 
     // _box2 销毁，释放内存
+
+    // 析构函数
+    let x = ToDrop;
+    println!("Made a ToDrop!");
 }
